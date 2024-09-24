@@ -34,6 +34,28 @@
 
 <body>
   
+  <style>
+    .hide-nav{
+      transform: translateY(-100%);
+    }
+    /* .navigation.nav-bg{
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    } */
+
+    header.navigation.fixed-top.nav-bg {
+      padding: 0%;
+      padding-left: 10%;
+      padding-right: 10%;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+    nav{
+      transition: 0.25s ease transform;
+    }
+  </style>
+
+
 
 <header class="navigation fixed-top">
   <nav class="navbar navbar-expand-lg navbar-dark">
@@ -723,5 +745,24 @@
 <script src="anothertemplate/js/main.js"></script>
 <script src="anothertemplate/js/modernizr-2.6.2.min.js"></script>
 <script src="anothertemplate/js/respond.min.js"></script>
+
+<script>
+  let lastScrollY = 0
+  const navbar = document.querySelector('nav') 
+  const nav_bg = document.querySelector('header.navigation.fixed-top.nav-bg ') 
+  window.addEventListener("scroll", ()=>{
+    const currentScrollY = window.scrollY
+
+    if (currentScrollY > lastScrollY){
+      navbar.classList.add('hide-nav')
+      nav_bg.style.opacity = 0;
+    }else{
+      navbar.classList.remove('hide-nav')
+      nav_bg.style.opacity = 1;
+    }
+    lastScrollY = currentScrollY
+  })
+</script>
+
 </body>
 </html>
