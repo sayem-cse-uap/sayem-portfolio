@@ -35,24 +35,26 @@
 <body>
   
   <style>
-    .hide-nav{
+    /* .hide-nav{
       transform: translateY(-100%);
-    }
-    /* .navigation.nav-bg{
-      opacity: 1;
-      transition: opacity 0.3s ease;
     } */
 
     header.navigation.fixed-top.nav-bg {
       padding: 0%;
       padding-left: 10%;
       padding-right: 10%;
-      opacity: 1;
-      transition: opacity 0.3s ease;
+      /* opacity: 1; */
+      /* transition: opacity 0.3s ease; */
     }
-    nav{
+
+    .navbar.navbar-expand-lg.navbar-dark{
+      margin: 0;
+      padding-top:0;
+      padding-bottom: 0;
+    }
+    /* nav{
       transition: 0.25s ease transform;
-    }
+    } */
   </style>
 
 
@@ -746,7 +748,7 @@
 <script src="anothertemplate/js/modernizr-2.6.2.min.js"></script>
 <script src="anothertemplate/js/respond.min.js"></script>
 
-<script>
+<!-- <script>
   let lastScrollY = 0
   const navbar = document.querySelector('nav') 
   let nav_bg = document.querySelector('header.navigation.fixed-top.nav-bg ') 
@@ -762,7 +764,7 @@
     }
     lastScrollY = currentScrollY
   })
-</script>
+</script> -->
 
 </body>
 </html>
